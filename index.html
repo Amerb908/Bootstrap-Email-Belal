@@ -23,11 +23,15 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Sent</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Spam</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Trash</a>    
                 </li>
-                <!-- Add more menu items -->
             </ul>
         </div>
     </nav>
+
 
     <!-- Search Bar -->
     <div class="container mt-4">
@@ -41,62 +45,66 @@
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search...">
                             <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">Search</button>
+                                <button class="btn-search" type="button">
+                                    Search
+                                </button>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
+            </div>
+        </div>
+    </div>
+    <!-- Inbox -->
+    <div class="card">
+                <div class="card">
+                    <div class="card-header">
+                        Send Email
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="recipient">To:</label>
+                                <input type="email" class="form-control" id="recipient" placeholder="Enter recipient email">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject:</label>
+                                <input type="text" class="form-control" id="subject" placeholder="Enter subject">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message:</label>
+                                <textarea class="form-control" id="message" rows="5" placeholder="Enter your message"></textarea>
+                            </div>
+                            <button type="submit" class="btn-primary">Send</button>
+                            <button type="button" class="btn-secondary">Cancel</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+    <!-- Inbox -->
+    <div class="card">
+        <div class="card-header">
+            Inbox
+        </div>
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action">Urgent: Project Deadline Approaching</a>
+                <a href="#" class="list-group-item list-group-item-action">Meeting Reminder: Tomorrow at 10 AM</a>
+                <a href="#" class="list-group-item list-group-item-action">Feedback Needed: Proposal Draft</a>
+                <a href="#" class="list-group-item list-group-item-action">Invitation: Team Building Event</a>
+                <a href="#" class="list-group-item list-group-item-action">Update: New Software Release</a>
+                <a href="#" class="list-group-item list-group-item-action">Discussion: Quarterly Performance Review</a>
+                <a href="#" class="list-group-item list-group-item-action">Important: Financial Report Submission</a>
+                <a href="#" class="list-group-item list-group-item-action">Training Session: Next Week Agenda</a>
+                <a href="#" class="list-group-item list-group-item-action">Action Required: Client Meeting Follow-Up</a>
+                <a href="#" class="list-group-item list-group-item-action">Holiday Schedule: Office Closure</a>
             </div>
         </div>
     </div>
 
-    <!-- Email Previews -->
-    <div class="container mt-4">
-        <div class="row">
-            <div class="col-md-3">
-                <!-- Sidebar with folders -->
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Folders</h5>
-                        <ul class="list-group">
-                            <li class="list-group-item">Main Folder</li>
-                            <li class="list-group-item">Spam Folder</li>
-                            <!-- Add more folders -->
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <!-- Email Previews -->
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Email Previews</h5>
-                        <div class="list-group">
-                            <a href="#" class="list-group-item list-group-item-action active">Please Reply!</a>
-                            <a href="#" class="list-group-item list-group-item-action">can you pick him up</a>
-                            <a href="#" class="list-group-item list-group-item-action">Pre-Order now!</a> <!-- Added third email preview -->
-                            <!-- Add more email previews -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-3">
-                <!-- Email Detail -->
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Email Detail</h5>
-                        <h6 class="card-subtitle mb-2 text-muted">Subject</h6>
-                        <p class="card-text">From: Amer@example.com</p>
-                        <p class="card-text">To: BVT@example.com</p>
-                        <p class="card-text">Date: 12/25/1992</p>
-                        <textarea class="form-control mb-3" rows="5" placeholder="Message here..."></textarea>
-                        <button type="button" class="btn btn-primary mr-2">Reply</button>
-                        <button type="button" class="btn btn-success">Compose</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+        
 
 
     <!-- Bootstrap JS and jQuery -->
