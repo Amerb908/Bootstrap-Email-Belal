@@ -5,12 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Email</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-
-    <!-- Navigation Bar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Email</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,33 +15,21 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Inbox</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Sent</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Spam</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Trash</a>    
-                </li>
+                <li class="nav-item active"><a class="nav-link" href="#">Inbox</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Sent</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Spam</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Trash</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Dropdown for Sending Email -->
     <div class="container mt-4">
+        <!-- Dropdown for Sending Email -->
         <div class="dropdown">
-            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Send Email
-            </button>
+            <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Send Email</button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                 <div class="card">
-                    <div class="card-header">
-                        Send Email
-                    </div>
+                    <div class="card-header">Send Email</div>
                     <div class="card-body">
                         <form>
                             <div class="form-group">
@@ -66,42 +51,31 @@
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Search Bar -->
-    <div class="container mt-4">
+        <!-- Search Bar -->
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card">
-                    <div class="card-header">
-                        Search for email
-                    </div>
+                    <div class="card-header">Search for email</div>
                     <div class="card-body">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Search...">
                             <div class="input-group-append">
-                                <button class="btn-search" type="button">
-                                    Search
-                                </button>
+                                <button class="btn btn-primary" type="button">Search</button>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Inbox -->
-    <div class="container mt-4">
+        <!-- Inbox List Group -->
         <div class="list-group">
-            <div class="card-header">
-                Inbox Mail
-            </div>
+            <div class="card-header">Inbox Mail</div>
+            <!-- Each email entry -->
+            <!-- Email 1 -->
             <a href="#email1" class="list-group-item list-group-item-action" data-toggle="collapse">
-                <span class="sender">Johnny Bravo</span> - 
-                <span class="date">April 20, 2024</span> 
-                <span class="time">10:00 AM</span>
+                <span class="sender">Johnny Bravo</span> - <span class="date">April 20, 2024</span> <span class="time">10:00 AM</span>
             </a>
             <div class="collapse" id="email1">
                 <div class="card card-body">
@@ -113,10 +87,9 @@
                     <button class="btn btn-secondary mt-1">Cancel</button>
                 </div>
             </div>
+            <!-- Email 2 -->
             <a href="#email2" class="list-group-item list-group-item-action" data-toggle="collapse">
-                <span class="sender">Jane Smith</span> - 
-                <span class="date">April 19, 2024</span> 
-                <span class="time">3:30 PM</span>
+                <span class="sender">Jane Smith</span> - <span class="date">April 19, 2024</span> <span class="time">3:30 PM</span>
             </a>
             <div class="collapse" id="email2">
                 <div class="card card-body">
@@ -128,10 +101,9 @@
                     <button class="btn btn-secondary mt-1">Cancel</button>
                 </div>
             </div>
+            <!-- Email 3 -->
             <a href="#email3" class="list-group-item list-group-item-action" data-toggle="collapse">
-                <span class="sender">Michael Johnson</span> - 
-                <span class="date">April 18, 2024</span> 
-                <span class="time">9:00 AM</span>
+                <span class="sender">Michael Johnson</span> - <span class="date">April 18, 2024</span> <span class="time">9:00 AM</span>
             </a>
             <div class="collapse" id="email3">
                 <div class="card card-body">
@@ -143,13 +115,10 @@
                     <button class="btn btn-secondary mt-1">Cancel</button>
                 </div>
             </div>
-            
+            <!-- Email 4 -->
             <a href="#email4" class="list-group-item list-group-item-action" data-toggle="collapse">
-                <span class="sender">Sarah Lee</span> - 
-                <span class="date">April 17, 2024</span> 
-                <span class="time">1:45 PM</span>
+                <span class="sender">Sarah Lee</span> - <span class="date">April 17, 2024</span> <span the="time">1:45 PM</span>
             </a>
-            
             <div class="collapse" id="email4">
                 <div class="card card-body">
                     📈 Learn the secrets to mastering investments and building wealth at our upcoming financial workshop.
@@ -159,13 +128,10 @@
                     <button class="btn btn-primary mt-1">Send Reply</button>
                     <button class="btn btn-secondary mt-1">Cancel</button>
                 </div>
-                
             </div>
-            
+            <!-- Email 5 -->
             <a href="#email5" class="list-group-item list-group-item-action" data-toggle="collapse">
-                <span class="sender">Chris Brown</span> - 
-                <span class="date">April 16, 2024</span> 
-                <span class="time">11:30 AM</span>
+                <span class="sender">Chris Brown</span> - <span the="date">April 16, 2024</span> <span the="time">11:30 AM</span>
             </a>
             <div class="collapse" id="email5">
                 <div class="card card-body">
@@ -174,7 +140,7 @@
                 <div class="reply-form mt-2">
                     <textarea class="form-control" placeholder="Type your reply here..."></textarea>
                     <button class="btn btn-primary mt-1">Send Reply</button>
-                    <button class="btn btn-secondary mt-1">Cancel</button>
+                    <button the="btn btn-secondary mt-1">Cancel</button>
                 </div>
             </div>
         </div>
