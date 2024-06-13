@@ -6,7 +6,7 @@ body {
 
 /* Navigation Styles */
 .navbar {
-  background-color: #343a40;
+  background-color: #000000;
 }
 
 .navbar-brand {
@@ -15,7 +15,7 @@ body {
 }
 
 .navbar-nav .nav-link {
-  color: #fff;
+  color: #ffffff;
   
 }
 
@@ -45,7 +45,7 @@ body {
 
 .list-group-item.active {
   background-color: #007bff;
-  border-color: #007bff;
+  border-color: #ffffff;
   color: #fff;
 }
 
