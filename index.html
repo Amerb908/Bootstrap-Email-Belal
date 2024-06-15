@@ -7,14 +7,23 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
+<body class="vh-100 overflow-hidden">
+    <nav class="navbar navbar-expand-md navbar-dark">
         <a class="navbar-brand" href="#">Email App</a>
+        <!-- Search Column -->
+        <div class="w-50 order-md-3">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search Emails" aria-label="Search Emails" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn-search" type="button" id="button-addon2">Search</button>
+                </div>
+            </div>
+        </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
+        <div class="collapse navbar-collapse d-md-none" id="navbarNav">
+            <ul class="navbar-nav d-md-none">
                 <li class="nav-item active"><a class="nav-link" href="#">Inbox</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Sent</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Spam</a></li>
@@ -23,98 +32,107 @@
         </div>
     </nav>
 
-    <div class="container-fluid mt-4">
-        <div class="row">
+    <div class="container-fluid h-100">
+        <div class="row h-100">
+            <!-- Folder Section -->
+            <div class="col-md-3 d-none d-md-flex flex-column folder">
+                <h2 class="nav-item"><a class="nav-link" href="#">Inbox</a></h2>
+                <h2 class="nav-item"><a class="nav-link" href="#">Sent</a></h2>
+                <h2 class="nav-item"><a class="nav-link" href="#">Spam</a></h2>
+                <h2 class="nav-item"><a class="nav-link" href="#">Trash</a></h2>
+                <div class="col-md-4">
+                    <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#sendEmailModal">Send Email</button>
+                    <!-- Modal for sending email -->
+                    <div class="modal fade" id="sendEmailModal" tabindex="-1" role="dialog" aria-labelledby="sendEmailModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="sendEmailModalLabel">Send Email</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+                                            <label for="recipient-email">To:</label>
+                                            <input type="email" class="form-control" id="recipient-email" placeholder="Enter recipient's email">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email-subject">Subject:</label>
+                                            <input type="text" class="form-control" id="email-subject" placeholder="Enter subject">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email-body">Message:</label>
+                                            <textarea class="form-control" id="email-body" rows="4"></textarea>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Send Email</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <!-- Inbox Column -->
-            <div class="col-md-4 mb-3">
+            <div class="col-md-4 mb-3 folder">
                 <div class="list-group">
                     <div class="card-header">Inbox Mail</div>
-                    <a href="#email1" class="list-group-item list-group-item-action" data-toggle="collapse">
+                    <!-- Email item 1 -->
+                    <a href="#" class="list-group-item list-group-item-action" data-target="#messageColumn" aria-expanded="false" aria-controls="messageColumn" onclick="document.getElementById('email-content').innerHTML = document.getElementById('email1-details').innerHTML;">
                         <span class="sender">Johnny Bravo</span> - <span class="date">April 20, 2024</span> <span class="time">10:00 AM</span>
+                        <button class="btn btn-sm btn-info float-right">Read More</button>
                     </a>
-                    <div class="collapse" id="email1">
+                    <div class="d-none" id="email1-details">
                         <div class="card card-body">
-                            🎉 Congratulations! You've won a free trip to Hawaii! Click here to claim your prize.
+                            <h4>Congratulations! 🎉</h4>
+                            <p>You've won a free trip to Hawaii! This exclusive offer includes 5 nights at a luxury resort, all meals included, plus a guided tour of the volcanoes and beaches of this beautiful island. Claim your prize by replying to this email with your full name and address.</p>
+                            <p><strong>Terms and Conditions:</strong> This promotion is only valid for the next 30 days and is subject to availability. Airfare not included.</p>
                         </div>
                         <div class="reply-form mt-2">
                             <textarea class="form-control" placeholder="Type your reply here..."></textarea>
                             <button class="btn btn-primary mt-1">Send Reply</button>
-                            <button class="btn btn-secondary mt-1" type="button">Cancel</button>
                         </div>
                     </div>
-                    <!-- Repeat for other emails -->
-                    <a href="#email2" class="list-group-item list-group-item-action" data-toggle="collapse">
-                        <span class="sender">Dexter</span> - <span class="date">April 19, 2024</span> <span class="time">11:30 AM</span>
+                    <!-- Email item 2 -->
+                    <a href="#" class="list-group-item list-group-item-action"  data-target="#messageColumn" aria-expanded="false" aria-controls="messageColumn" onclick="document.getElementById('email-content').innerHTML = document.getElementById('email2-details').innerHTML;">
+                        <span class="sender">Dexter</span> - <span class="date">April 19, 2024</span> <span the="time">11:30 AM</span>
+                        <button class="btn btn-sm btn-info float-right">Read More</button>
                     </a>
-                    <div class="collapse" id="email2">
+                    <div class="d-none" id="email2-details">
                         <div class="card card-body">
-                            🎉 New science kit available! Check out our latest products.
+                            <h4>New Science Kit Available! 🧪</h4>
+                            <p>Explore the wonders of science with our latest DIY science kit. This kit includes experiments in chemistry, physics, and biology, perfect for kids aged 8-14. Check out our website for more information and special discounts for school orders.</p>
                         </div>
                         <div class="reply-form mt-2">
                             <textarea class="form-control" placeholder="Type your reply here..."></textarea>
                             <button class="btn btn-primary mt-1">Send Reply</button>
-                            <button class="btn btn-secondary mt-1" type="button">Cancel</button>
                         </div>
                     </div>
-                    <a href="#email3" class="list-group-item list-group-item-action" data-toggle="collapse">
-                        <span class="sender">Velma Dinkley</span> - <span class="date">April 18, 2024</span> <span class="time">08:15 AM</span>
+                    <!-- Email item 3 -->
+                    <a href="#" class="list-group-item list-group-item-action"  data-target="#messageColumn" aria-expanded="false" aria-controls="messageColumn" onclick="document.getElementById('email-content').innerHTML = document.getElementById('email3-details').innerHTML;">
+                        <span class="sender">Velma Dinkley</span> - <span class="date">April 18, 2024</span> <span the="time">08:15 AM</span>
+                        <button class="btn btn-sm btn-info float-right">Read More</button>
                     </a>
-                    <div class="collapse" id="email3">
+                    <div class="d-none" id="email3-details">
                         <div class="card card-body">
-                            🎉 Reminder: Book club meeting this Friday at 7 PM.
+                            <h4>Reminder: Book Club Meeting 📚</h4>
+                            <p>Don't forget our monthly book club meeting this Friday at 7 PM at the local library. We'll be discussing 'The Mystery of the Vanishing Treasure'. Please read the book before attending. Snacks and drinks will be provided.</p>
                         </div>
                         <div class="reply-form mt-2">
                             <textarea class="form-control" placeholder="Type your reply here..."></textarea>
                             <button class="btn btn-primary mt-1">Send Reply</button>
-                            <button class="btn btn-secondary mt-1" type="button">Cancel</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Search Column -->
-            <div class="col-md-4">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Search Emails" aria-label="Search Emails" aria-describedby="button-addon2">
-                    <div class="input-group-append">
-                        <button class="btn-search" type="button" id="button-addon2">Search</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Send Email Column -->
-            <div class="col-md-4">
-                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#sendEmailModal">Compose Email</button>
-
-                <!-- Modal for sending email -->
-                <div class="modal fade" id="sendEmailModal" tabindex="-1" role="dialog" aria-labelledby="sendEmailModalLabel" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="sendEmailModalLabel">Send Email</h5>
-                                <button type="button" the close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="form-group">
-                                        <label for="recipient-email">To:</label>
-                                        <input type="email" class="form-control" id="recipient-email" placeholder="Enter recipient's email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email-subject">Subject:</label>
-                                        <input type="text" class="form-control" id="email-subject" placeholder="Enter subject">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email-body">Message:</label>
-                                        <textarea class="form-control" id="email-body" rows="4"></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary">Send Email</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
+            <!-- Message Column -->
+            <div class="col-md-5 d-flex flex-column folder collapse" id="messageColumn">
+                <h2>Message</h2>
+                <div id="email-content">
+                    <!-- Content filled by clicking "Read More" -->
                 </div>
             </div>
         </div>
