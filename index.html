@@ -35,7 +35,8 @@
     <div class="container-fluid h-100">
         <div class="row h-100">
             <!-- Folder Section -->
-            <div class="col-md-3 d-none d-md-flex flex-column folder">
+            <div class="col-md-3 d-none d-md-flex flex-column folder align-items-center">
+                <h2>Folders</h2>
                 <h2 class="nav-item"><a class="nav-link" href="#">Inbox</a></h2>
                 <h2 class="nav-item"><a class="nav-link" href="#">Sent</a></h2>
                 <h2 class="nav-item"><a class="nav-link" href="#">Spam</a></h2>
@@ -78,7 +79,8 @@
             <!-- Inbox Column -->
             <div class="col-md-4 mb-3 folder">
                 <div class="list-group">
-                    <div class="card-header">Inbox Mail</div>
+                    <h2 class = "align-items-center">Inbox</h2>
+                    <div class="card-header"></div>
                     <!-- Email item 1 -->
                     <a href="#" class="list-group-item list-group-item-action" data-target="#messageColumn" aria-expanded="false" aria-controls="messageColumn" onclick="document.getElementById('email-content').innerHTML = document.getElementById('email1-details').innerHTML;">
                         <span class="sender">Johnny Bravo</span> - <span class="date">April 20, 2024</span> <span class="time">10:00 AM</span>
@@ -129,7 +131,7 @@
             </div>
 
             <!-- Message Column -->
-            <div class="col-md-5 d-flex flex-column folder collapse" id="messageColumn">
+            <div class="col-md-5 d-flex flex-column folder collapse align-items-center" id="messageColumn">
                 <h2>Message</h2>
                 <div id="email-content">
                     <!-- Content filled by clicking "Read More" -->
